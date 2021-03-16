@@ -1,0 +1,13 @@
+$TTL	1w
+@	IN	SOA	dns.example.com. root.dns.example.com. (
+			5		; Serial
+			1w 		; Refresh
+			1d		; Retry
+			28d		; Expire
+			1w) 		; Negative Cache TTL
+			 
+; name servers - NS records
+		IN	NS	dns.example.com.
+
+; PTR Records
+2.20.0.10.in-addr.arpa. 	IN	PTR	host20.1.example.com.

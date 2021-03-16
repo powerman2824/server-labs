@@ -1,0 +1,13 @@
+# As root install Bind9
+sudo apt-get install -y bind9 bind9-doc dnsutils
+
+# Make sure service is working
+sudo service bind9 status
+
+# Verify that the Bind9 daemon is working
+dig @127.0.0.1 . ns
+
+# Modify /etc/resolv.conf so that only the local server IP address is displayed
+sudo vim /etc/resolv.conf
+
+# Note to modify your DHCP file either on the Router or Server
